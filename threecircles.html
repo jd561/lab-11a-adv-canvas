@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="300" height="300">
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+				// 1. red outer circle w/radius of 100
+			context.fillStyle = "#ff0000"; // red
+			context.beginPath();
+			context.arc(150, 150, 100, 0, 2 * Math.PI, true);
+				// context.arc(x, y, radius, start angle, end angle, clockwise);
+			context.closePath();
+			context.fill();
+				// 2. blue middle circle w/radius of 75
+			context.fillStyle = "#0000ff"; // blue
+			context.beginPath();
+			context.arc(150, 150, 75, 0, 2 * Math.PI, true);
+				// context.arc(x, y, radius, start angle, end angle, clockwise);
+			context.closePath();
+			context.fill();
+			// 3. green inner circle w/radius of 50
+			context.fillStyle = "#00ff00"; // green
+			context.beginPath();
+			context.arc(150, 150, 50, 0, 2 * Math.PI, true);
+				// context.arc(x, y, radius, start angle, end angle, clockwise);
+			context.closePath();
+			context.fill();
+		}
+	</script>
+
+</body>
+</html>
